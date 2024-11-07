@@ -1,5 +1,5 @@
 //!
-//! [`TransactionInstruction`](https://solana-labs.github.io/solana-web3.js/classes/TransactionInstruction.html) class bindings.
+//! [`TransactionInstruction`](https://solana-labs.github.io/solana-web3.js/v1.x/classes/TransactionInstruction.html) class bindings.
 //!
 use crate::account::*;
 use crate::imports::*;
@@ -11,7 +11,7 @@ extern "C" {
     #[derive(Debug, Clone, PartialEq, Eq)]
     /// TransactionInstructionConfig (TransactionInstructionCtorFields)
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/types/TransactionInstructionCtorFields.html)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/types/TransactionInstructionCtorFields.html)
     ///
     pub type TransactionInstructionConfig;
 }
@@ -45,14 +45,14 @@ extern "C" {
     #[derive(Debug, Clone)]
     /// TransactionInstruction
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/classes/TransactionInstruction.html)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/classes/TransactionInstruction.html)
     ///
     pub type TransactionInstruction;
 
     #[wasm_bindgen(constructor, js_namespace=["solanaWeb3"])]
     /// Create TransactionInstruction
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/classes/TransactionInstruction.html)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/classes/TransactionInstruction.html)
     ///
     pub fn new(options: &TransactionInstructionConfig) -> TransactionInstruction;
 }

@@ -1,5 +1,5 @@
 //!
-//! [`Connection`](https://solana-labs.github.io/solana-web3.js/classes/Connection.html) class bindings.
+//! [`Connection`](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Connection.html) class bindings.
 //!
 use crate::account::ProgramAccount;
 use crate::api::*;
@@ -17,28 +17,28 @@ extern "C" {
     #[wasm_bindgen(constructor, js_namespace=["solanaWeb3"])]
     /// Create Connection
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/classes/Connection.html)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Connection.html)
     ///
     pub fn new(endpoint: String) -> Connection;
 
     #[wasm_bindgen(constructor, js_namespace=["solanaWeb3"])]
     /// Create Connection
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/classes/Connection.html)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Connection.html)
     ///
     pub fn new_with_commitment(endpoint: String, commitment: String) -> Connection;
 
     #[wasm_bindgen(method, catch, js_name = "getLatestBlockhash")]
     /// Fetch the latest blockhash from the cluster
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/classes/Connection.html#getLatestBlockhash)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Connection.html#getLatestBlockhash)
     ///
     pub async fn get_latest_block_hash_impl(this: &Connection) -> Result<JsValue>;
 
     #[wasm_bindgen(method, catch, js_name = "getLatestBlockhash")]
     /// Fetch the latest blockhash from the cluster
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/classes/Connection.html#getLatestBlockhash)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Connection.html#getLatestBlockhash)
     ///
     pub async fn get_latest_block_hash_with_commitment(
         this: &Connection,
@@ -48,14 +48,14 @@ extern "C" {
     #[wasm_bindgen(method, catch, js_name = "sendRawTransaction")]
     /// Send a transaction that has already been signed and serialized into the wire format
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/classes/Connection.html#sendRawTransaction)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Connection.html#sendRawTransaction)
     ///
     pub async fn send_raw_transaction(this: &Connection, tx: JsValue) -> Result<JsValue>;
 
     #[wasm_bindgen(method, catch, js_name = "sendRawTransaction")]
     /// Send a transaction that has already been signed and serialized into the wire format
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/classes/Connection.html#sendRawTransaction)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Connection.html#sendRawTransaction)
     ///
     pub async fn send_raw_transaction_with_options_impl(
         this: &Connection,
@@ -66,14 +66,14 @@ extern "C" {
     #[wasm_bindgen(method, catch, js_name = "getAccountInfo")]
     /// Fetch all the account info for the specified public key
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/classes/Connection.html#getAccountInfo)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Connection.html#getAccountInfo)
     ///
     pub async fn get_account_info_impl(this: &Connection, public_key: JsValue) -> Result<JsValue>;
 
     #[wasm_bindgen(method, catch, js_name = "getAccountInfo")]
     /// Fetch all the account info for the specified public key
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/classes/Connection.html#getAccountInfo)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Connection.html#getAccountInfo)
     ///
     pub async fn get_account_info_with_options_impl(
         this: &Connection,
@@ -84,7 +84,7 @@ extern "C" {
     #[wasm_bindgen(method, catch, js_name = "getProgramAccounts")]
     /// Fetch all the account info for the specified public key
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/classes/Connection.html#getProgramAccounts)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Connection.html#getProgramAccounts)
     ///
     pub async fn get_program_accounts_with_config_impl(
         this: &Connection,
@@ -99,14 +99,14 @@ extern "C" {
     #[wasm_bindgen(getter, method, js_name = "blockhash")]
     /// get blockhash
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/classes/Connection.html#getLatestBlockhash)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Connection.html#getLatestBlockhash)
     ///
     pub fn block_hash(this: &LatestBlockhashInfo) -> JsValue;
 
     #[wasm_bindgen(getter, method, js_name = "lastValidBlockHeight")]
     /// get lastValidBlockHeight
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/classes/Connection.html#getLatestBlockhash)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/classes/Connection.html#getLatestBlockhash)
     ///
     pub fn last_valid_block_height(this: &LatestBlockhashInfo) -> JsValue;
 

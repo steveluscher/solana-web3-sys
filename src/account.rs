@@ -1,5 +1,5 @@
 //!
-//! [`AccountMeta`](https://solana-labs.github.io/solana-web3.js/types/AccountMeta.html) and `ProgramAccount` (alias to [`AccountInfo`](https://solana-labs.github.io/solana-web3.js/types/AccountInfo.html)) class bindings.
+//! [`AccountMeta`](https://solana-labs.github.io/solana-web3.js/v1.x/types/AccountMeta.html) and `ProgramAccount` (alias to [`AccountInfo`](https://solana-labs.github.io/solana-web3.js/v1.x/types/AccountInfo.html)) class bindings.
 //!
 use crate::imports::*;
 use crate::publickey::PublicKey;
@@ -16,87 +16,87 @@ extern "C" {
 
     #[wasm_bindgen(extends = Object)]
     #[derive(Debug)]
-    /// Information describing an account. This type is an alias for interfacing with the [`AccountInfo`](https://solana-labs.github.io/solana-web3.js/types/AccountInfo.html) class.
+    /// Information describing an account. This type is an alias for interfacing with the [`AccountInfo`](https://solana-labs.github.io/solana-web3.js/v1.x/types/AccountInfo.html) class.
     /// In `solana-web3-sys` JavaScript AccountInfo class is renamed to `ProgramAccount` to prevent name clashes with native Solana SDK `AccountInfo` class.
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/types/AccountInfo.html)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/types/AccountInfo.html)
     ///
     pub type ProgramAccount;
 
     #[wasm_bindgen(constructor, js_class=Object)]
     /// Information describing an account
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/types/AccountInfo.html)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/types/AccountInfo.html)
     ///
     pub fn new() -> ProgramAccount;
 
     #[wasm_bindgen(getter, method)]
     /// Getter: Data assigned to the account
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/types/AccountInfo.html)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/types/AccountInfo.html)
     ///
     pub fn data(this: &ProgramAccount) -> Vec<u8>;
 
     #[wasm_bindgen(setter, method, js_name = "data")]
     /// Setter: Data assigned to the account
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/types/AccountInfo.html)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/types/AccountInfo.html)
     ///
     pub fn set_data(this: &ProgramAccount, data: Vec<u8>);
 
     #[wasm_bindgen(getter, method)]
     /// Getter: `true` if this account's data contains a loaded program
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/types/AccountInfo.html)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/types/AccountInfo.html)
     ///
     pub fn executable(this: &ProgramAccount) -> bool;
 
     #[wasm_bindgen(setter, method, js_name = "executable")]
     /// Setter: `true` if this account's data contains a loaded program
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/types/AccountInfo.html)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/types/AccountInfo.html)
     ///
     pub fn set_executable(this: &ProgramAccount, executable: bool);
 
     #[wasm_bindgen(getter, method)]
     /// Getter: Number of lamports assigned to the account
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/types/AccountInfo.html)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/types/AccountInfo.html)
     ///
     pub fn lamports(this: &ProgramAccount) -> BigInt;
 
     #[wasm_bindgen(setter, method, js_name = "lamports")]
     /// Setter: Number of lamports assigned to the account
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/types/AccountInfo.html)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/types/AccountInfo.html)
     ///
     pub fn set_lamports(this: &ProgramAccount, lamports: BigInt);
 
     #[wasm_bindgen(getter, method)]
     /// Getter: [`PublicKey`] (Identifier) of the program that owns the account
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/types/AccountInfo.html)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/types/AccountInfo.html)
     ///
     pub fn owner(this: &ProgramAccount) -> PublicKey;
 
     #[wasm_bindgen(setter, method, js_name = "owner")]
     /// Setter: [`PublicKey`] (Identifier) of the program that owns the account
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/types/AccountInfo.html)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/types/AccountInfo.html)
     ///
     pub fn set_owner(this: &ProgramAccount, owner: PublicKey);
 
     #[wasm_bindgen(getter, method, js_name = "rentEpoch")]
     /// Getter: Rent epoch info for account
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/types/AccountInfo.html)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/types/AccountInfo.html)
     ///
     pub fn rent_epoch(this: &ProgramAccount) -> BigInt;
 
     #[wasm_bindgen(setter, method, js_name = "rentEpoch")]
     /// Setter: Rent epoch info for account
     ///
-    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/types/AccountInfo.html)
+    /// ⧉ [Solana Documentation](https://solana-labs.github.io/solana-web3.js/v1.x/types/AccountInfo.html)
     ///
     pub fn set_rent_epoch(this: &ProgramAccount, rent_epoch: BigInt);
 
